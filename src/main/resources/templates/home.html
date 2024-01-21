@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,32 +7,36 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body>
-<nav class="flex items-center justify-center bg-gray-800 text-white">
-    <div class="w-[80%] flex items-center justify-between self-center h-[70px] py-2 ">
-        <a href="" class="text-3xl pl-10 font-bold leading-none dark:text-gray-400">Logo</a>
-        <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex">
-            <li><a href="" class="text-sm text-white hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">Home</a>
+<nav class="flex items-center justify-center bg-gray-800 text-white fixed w-full">
+    <div class="w-[80%] flex items-center justify-between self-center h-[70px] py-2 [&>ul>li>a]:text-white">
+        <a href="/" class="text-3xl pl-10 font-bold leading-none dark:text-gray-400">Logo</a>
+        <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex [&>li:nth-child(5)>a]:font-bold">
+            <li><a href="/" class="text-sm hover:text-cyan-700 font-bold dark:text-gray-400 dark:hover:text-cyan-300">Home</a>
             </li>
-            <li><a href="" class="text-sm text-white hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">About
-                us</a>
+            <li class="relative group"><a href="available_books" class="text-sm hover:text-cyan-700 font-bold
+             dark:text-gray-400 dark:hover:text-cyan-300">Available Books</a>
+
+               <!-- <ul class="opacity-0 group-hover:opacity-100 top-3 transition-all
+                 translate-y-5 group-hover:translate-y-0 duration-500 absolute
+                 bg-red-400 z-10 [&>ul>li>a]:text-blue-700">
+                    <li><a href="#">About them</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>-->
             </li>
-            <li><a href="" class="text-sm text-white hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">Features</a>
-            </li>
-            <li><a href="" class="text-sm text-white hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">Blog </a>
-            </li>
-            <li><a href="" class="text-sm text-white hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">Testimonials</a>
+            <li><a href="my_books" class="text-sm hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">My Books</a>
             </li>
         </ul>
         <div>
             <a class="nav-link disabled text-white hover:text-cyan-700
-        dark:text-gray-400 dark:hover:text-cyan-300 pr-10" href="#">New Book Register</a>
+        dark:text-gray-400 dark:hover:text-cyan-300 pr-10" href="book_register">New Book Register</a>
         </div>
     </div>
 </nav>
 
-<div class="flex justify-center items-center flex-col text-center mb-5">
+<div class="flex justify-center items-center flex-col text-center mb-5 pt-[100px]">
     <h1 class="text-2xl font-bold py-4">WELCOME TO NEW BOOK STORE</h1>
-    <div class="max-w-[75%]">
+    <div class="max-w-[75%] mb-5">
         <h6 class="d-flex-center text-center">Bacon ipsum dolor amet jowl pig pork meatball pork belly. Beef ribs
             buffalo hamburger bulldogged. Pig acceptance pastrami shoulder fatback bacon kevin ham hock downer sirloin
             prosciutto T-bone meatloaf. Sausage swine flank pork, spare ribs pork loin rib eye beef ribs hamburger.
@@ -40,7 +44,7 @@
             pastrami jowl. Buffalo cupid allocator tongue prosciutto, pork chop short ribs acceptance meatloaf corned beef
             chicken flank sirloin spare ribs. Boudinot meatball ratatouille tenderloin meatloaf.</h6>
     </div>
-    <img alt="store" src="/images/store.jpg" width="400">
+    <img alt="store" src="/images/store.jpg" class="w-full h-full object-cover max-w-[500px]">
 </div>
 </body>
 </html>
