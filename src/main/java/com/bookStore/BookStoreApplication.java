@@ -8,4 +8,5 @@ public class BookStoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BookStoreApplication.class, args);
 	}
+	// npx tailwindcss -i ./src/main/resources/static/input.css -o ./src/main/resources/static/output.css --watch
 }

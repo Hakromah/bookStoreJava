@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class BookService {
-
+    //Book Services
     @Autowired
     private BookRepository bRepo;
 
@@ -17,11 +17,11 @@ public class BookService {
         bRepo.save(b);
     }
 
-    public List<Book> getAllBook(){
+    public List<Book> getAllBook() {
         return bRepo.findAll();
     }
 
-    public Book getBookById(int id){
+    public Book getBookById(int id) {
         return bRepo.findById(id).get();
     }
 }
