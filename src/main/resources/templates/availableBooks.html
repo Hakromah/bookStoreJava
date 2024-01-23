@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Available Books</title>
     <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/2282204c47.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="flex items-center justify-center bg-gray-800 text-white">
@@ -52,7 +53,10 @@
             <td th:text="${b.author}"></td>
             <td th:text="${b.price}" ></td>
             <td><a class="py-2 px-4 m-4 bg-gray-800 text-white rounded-md hover:text-cyan-700
-             hover:bg-yellow-400 duration-500 transition-all ease-in-out" th:href="@{/mylist/{id}(id=${b.id})}">Add to MyBook</a></td>
+             hover:bg-yellow-400 duration-500 transition-all ease-in-out" th:href="@{/mylist/{id}(id=${b.id})}">Add to MyBook</a>
+                <a href="@/{}" class="text-red-500 text-2xl mx-4 cursor-pointer"><i class="fa-solid fa-trash"></i></a>
+                <a href="" class="text-yellow-500 text-2xl cursor-pointer"><i class="fa-solid fa-pen-to-square"></i></a>
+            </td>
         </tr>
         </tbody>
         <!-- -->

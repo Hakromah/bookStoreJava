@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Available Books</title>
     <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/2282204c47.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="flex items-center justify-center bg-gray-800 text-white">
@@ -52,8 +53,10 @@
             <td th:text="${b.name}"></td>
             <td th:text="${b.author}"></td>
             <td th:text="${b.price}" ></td>
-            <td><a href="" class="py-2 px-4 m-4 bg-gray-800 text-white rounded-md hover:text-cyan-700
-             hover:bg-yellow-400 duration-500 transition-all ease-in-out">delete</a></td>
+            <td><a class="text-red-700 cursor-pointer hover:text-red-500"
+            th:href="@{/deleteMyList/{id}(id=${b.id})}"><i class="fa-solid fa-trash"></i></a></td>
+            <!-- href="" class="py-2 px-4 m-4 bg-gray-800 text-white rounded-md hover:text-cyan-700
+             hover:bg-yellow-400 duration-500 transition-all ease-in-out"-->
         </tr>
         </tbody>
     </table>
