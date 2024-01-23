@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+<nav class="flex items-center justify-center bg-gray-800 text-white fixed z-50 w-full">
+    <div class="w-[80%] flex items-center justify-between self-center h-[70px] py-2 [&>ul>li>a]:text-white">
+        <a href="/" class="text-3xl pl-10 font-bold leading-none dark:text-gray-400">Book Store</a>
+        <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex [&>li:nth-child(5)>a]:font-bold">
+            <li><a href="/" class="text-sm hover:text-cyan-700 font-bold dark:text-gray-400 dark:hover:text-cyan-300">Home</a>
+            </li>
+            <li class="relative group"><a href="available_books" class="text-sm hover:text-cyan-700 font-bold
+             dark:text-gray-400 dark:hover:text-cyan-300">Available Books</a>
+
+                <!-- <ul class="opacity-0 group-hover:opacity-100 top-3 transition-all
+                  translate-y-5 group-hover:translate-y-0 duration-500 absolute
+                  bg-red-400 z-10 [&>ul>li>a]:text-blue-700">
+                     <li><a href="#">About them</a></li>
+                     <li><a href="#">Colors</a></li>
+                     <li><a href="#">News</a></li>
+                 </ul>-->
+            </li>
+            <li><a href="my_books" class="text-sm hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">My
+                Books</a>
+            </li>
+        </ul>
+        <div>
+            <a class="nav-link disabled text-white hover:text-cyan-700
+        dark:text-gray-400 dark:hover:text-cyan-300 pr-10" href="book_register">Edit Book Here</a>
+        </div>
+    </div>
+</nav>
+
+<section
+        class="relative h-[100vh] overflow-hidden bg-amber-400 py-36 flex items-center bg-[url('/images/store.jpg')] bg-center bg-cover justify-center">
+
+    <div class="absolute inset-0 bg-gradient-to-br h-[100vh] from-transparent via-indigo-400 to-indigo-900"></div>
+
+    <div class="container relative rounded-xl shadow-lg p-8 text-gray-600 md:w-80 max-w-[75%] w-full flex flex-col justify-center items-center bg-red-400">
+        <h1 class="text-center font-bold text-2xl">New Book Register</h1>
+        <form th:action="@{/save}" method="post" class="flex flex-col space-y-4 w-full justify-start items-start"
+              th:object="${book}">
+            <input type="hidden" name="id" th:value="${book.id}">
+            <div class="w-full">
+                <label for="name">Name</label>
+                <input required type="text" id="name" name="name" th:value="${book.name}"
+                       class="ring-1 ring-gray-300 mt-2 border border-gray-950 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-purple-300"/>
+            </div>
+            <div class="w-full">
+                <label for="author">Author</label>
+                <input required type="text" id="author" name="author" th:value="${book.author}"
+                       class="ring-1 ring-gray-300 mt-2 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-purple-300"/>
+            </div>
+            <!-- -->
+
+            <div class="w-full">
+                <label for="price">Price</label>
+                <input required type="text" id="price" name="price" th:value="${book.price}"
+                       class="ring-1 ring-gray-300 mt-2 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-purple-300"/>
+            </div>
+            <div class="w-full flex justify-center items-center">
+                <button class="self-end bg-cyan-700 font-bold rounded-lg px-6 py-2 uppercase text-white duration-500 transition-all ease-in-out hover:bg-yellow-400">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+</section>
+</body>
+</html>
