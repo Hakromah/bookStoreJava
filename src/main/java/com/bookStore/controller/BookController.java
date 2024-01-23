@@ -67,6 +67,7 @@ public class BookController {
         return "redirect:/my_books";
     }
 
+    // Edit book
     @RequestMapping("/editBook/{id}")
     public String editBook(@PathVariable("id") int id, Model model) {
         Book b = service.getBookById(id);
@@ -74,6 +75,7 @@ public class BookController {
         return "bookEdit";
     }
 
+    //Delete the book
     @RequestMapping("/deleteAvailableList/{id}")
     public String deleteAvailableList(@PathVariable("id") int id) {
         service.deleteById(id);
