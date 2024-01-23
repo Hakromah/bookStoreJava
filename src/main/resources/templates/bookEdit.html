@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit Book</title>
     <link rel="stylesheet" href="output.css">
 </head>
 <body>
-<nav class="flex items-center justify-center bg-gray-800 text-white fixed z-50 w-full">
+<nav class="flex items-center justify-center bg-red-400 text-white fixed z-50 w-full">
     <div class="w-[80%] flex items-center justify-between self-center h-[70px] py-2 [&>ul>li>a]:text-white">
         <a href="/" class="text-3xl pl-10 font-bold leading-none dark:text-gray-400">Book Store</a>
         <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex [&>li:nth-child(5)>a]:font-bold">
             <li><a href="/" class="text-sm hover:text-cyan-700 font-bold dark:text-gray-400 dark:hover:text-cyan-300">Home</a>
             </li>
-            <li class="relative group"><a href="available_books" class="text-sm hover:text-cyan-700 font-bold
+            <li class="relative group"><a href="/available_books" class="text-sm hover:text-cyan-700 font-bold
              dark:text-gray-400 dark:hover:text-cyan-300">Available Books</a>
 
                 <!-- <ul class="opacity-0 group-hover:opacity-100 top-3 transition-all
@@ -23,13 +24,13 @@
                      <li><a href="#">News</a></li>
                  </ul>-->
             </li>
-            <li><a href="my_books" class="text-sm hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">My
+            <li><a href="/my_books" class="text-sm hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300">My
                 Books</a>
             </li>
         </ul>
         <div>
             <a class="nav-link disabled text-white hover:text-cyan-700
-        dark:text-gray-400 dark:hover:text-cyan-300 pr-10" href="book_register">Edit Book Here</a>
+        dark:text-gray-400 dark:hover:text-cyan-300 pr-10" href="/book_register">Edit Book Here</a>
         </div>
     </div>
 </nav>
@@ -68,7 +69,6 @@
             </div>
         </form>
     </div>
-
 </section>
 </body>
 </html>

@@ -33,7 +33,6 @@ public class BookController {
         return "bookRegister";
     }
 
-
     // fetch data from databases and send it to Available book list
     @GetMapping("/available_books")
     public ModelAndView getAllBook() {
